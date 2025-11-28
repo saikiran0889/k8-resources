@@ -4,5 +4,8 @@ metadata:
   name: errorhandling
 spec:
   containers:
-  - name: nginx
-    image: nginxs
+  # - name: nginx
+  #   image: nginxs
+  - name: almalinux
+    image: almalinux:9
+    
