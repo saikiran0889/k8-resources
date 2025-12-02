@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx
+  labels:
+    purpose: deployment
+    project: roboshop
+spec:
+  replicas: 6
+  selector:
+    matchLabels:
+      purpose: Deployment
+      project: roboshop
+  template:
+    metadata:
+      labels:
+        purpose: Deployment
+        project: roboshop
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
