@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-loadbalancer-service
+  namespace: roboshop
+  labels: 
+    project: roboshop
+    component: frontend
+    environment: dev
+    purpose: node-loadbalancer
+spec:
+  containers:
+  - name: nginx
+    image: nginx
